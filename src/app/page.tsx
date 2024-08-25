@@ -1,3 +1,4 @@
+import { Box, Slider } from "@mui/material";
 import Image from "next/image";
 
 export default function Home() {
@@ -108,6 +109,37 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <Box sx={{ width: 300 }}>
+        <Slider
+          size="small"
+          defaultValue={70}
+          aria-label="Small"
+          valueLabelDisplay="auto"
+          sx={{
+            "& .MuiSlider-thumb": {
+              width: 20, // Width of the thumb (oval width)
+              height: 30, // Height of the thumb (oval height)
+              borderRadius: "50%",
+              transform: "rotate(45deg) translateX(-20px)", // Rotating the oval 45 degrees and moving it up
+              transformOrigin: "center", // Ensure rotation happens from the center
+            },
+          }}
+        />
+        <Slider
+          defaultValue={50}
+          aria-label="Default"
+          valueLabelDisplay="auto"
+          sx={{
+            "& .MuiSlider-thumb": {
+              width: 20, // Width of the thumb (oval width)
+              height: 30, // Height of the thumb (oval height)
+              borderRadius: "80%",
+              transform: "rotate(45deg) translateY(-20px)", // Rotating the oval 45 degrees and moving it up
+              transformOrigin: "center", // Ensure rotation happens from the center
+            },
+          }}
+        />
+      </Box>
     </main>
   );
 }
