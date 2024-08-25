@@ -36,6 +36,7 @@ const Card = ({ count }: cardProps) => {
             width={100}
             height={100}
             className="flex-center"
+            priority
           />
         </div>
       </div>
