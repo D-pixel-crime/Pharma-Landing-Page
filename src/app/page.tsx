@@ -17,13 +17,13 @@ export default function Home() {
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-${
+      className={`flex max-w-screen min-h-screen flex-col items-center justify-${
         isLoaded ? "between" : "center"
       }`}
     >
       {isLoaded ? (
         <>
-          <div className="flex flex-col items-center px-24 py-10 gap-10">
+          <div className="flex flex-col items-center lg:px-24 sm:px-14 py-10 gap-10">
             <Header />
             <Body />
           </div>

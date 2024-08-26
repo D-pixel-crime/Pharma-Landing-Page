@@ -14,7 +14,7 @@ const Body = () => {
           <form
             action="post"
             onSubmit={(e) => e.preventDefault()}
-            className="flex gap-4 text-sm"
+            className="flex gap-4 lg:text-sm sm:text-xs"
           >
             <div
               className="flex justify-between items-center text-slate-500 px-4 py-1 rounded-full"
@@ -71,7 +71,7 @@ const Body = () => {
             </div>
           </form>
         </div>
-        <div className="grid grid-cols-3 gap-4 mt-5">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5">
           {Array.from({ length: 15 }).map((_, index) => (
             <Card key={index} count={index + 1} />
           ))}

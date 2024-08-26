@@ -19,8 +19,12 @@ const Card = ({ count }: cardProps) => {
   return (
     <div
       className={`flex flex-col border-2 ${
-        isEvenRow ? "border-[#28E3E9]" : "shadow-md shadow-black/20"
-      } rounded-tl-3xl rounded-br-3xl pt-4`}
+        isEvenRow ? "sm:border-[#28E3E9]" : "sm:shadow-md sm:shadow-black/20"
+      } rounded-tl-3xl rounded-br-3xl pt-4  ${
+        Number(count) % 2 !== 0
+          ? "max-sm:border-[#28E3E9]"
+          : "max-sm:shadow-sm max-sm:shadow-black/20"
+      } `}
     >
       <div className="w-full flex flex-col gap-5 border-b-2 border-[#28E3E9] pb-4">
         <div className="flex justify-start px-4">
